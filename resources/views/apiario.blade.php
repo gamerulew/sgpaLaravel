@@ -56,18 +56,6 @@
                                     <input type="number" class="form-control" name="enxames" id="enxames" value="{{$apiario->getEnxames()}}" required>
                                 </div>
                             </div>
-                            <hr>
-                            <h6 class="font-weight-bold">Caixas adicionadas na ultima visita</h6>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <label>Melgueiras</label>
-                                    <input type="number" class="form-control" name="melgueirasNovas" id="melgueirasNovas" value="{{$apiario->getMelgueirasNovas()}}">
-                                </div>
-                                <div class="col-md-6">
-                                    <label>Ninhos</label>
-                                    <input type="number" class="form-control" name="ninhosNovos" id="ninhosNovos" value="{{$apiario->getNinhosNovos()}}">
-                                </div>
-                            </div>
                             <div class="row my-2 text-right">
                                 <div class="col-md-12">
                                     <button type="submit" class="btn btn-success">Editar</button>

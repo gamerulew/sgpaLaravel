@@ -37,6 +37,10 @@ class Apiario extends Model
     public function getDataVisita(){
         return $this->dataVisita;
     }
+    public function getDataVisitaFormat(){
+        $data = new \DateTime($this->getDataVisita());
+        return $data->format('d/m/Y');
+    }
     //SETTERS
     public function setNome($nome){
     	$this->nome = $nome;
@@ -65,5 +69,6 @@ class Apiario extends Model
     public function setNinhosNovos($ninhos){
         $this->ninhosNovos = $ninhos;
     }
+
 
 }

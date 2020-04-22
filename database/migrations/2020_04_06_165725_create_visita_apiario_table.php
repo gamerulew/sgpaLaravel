@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateApiariosTable extends Migration
+class CreateVisitaApiarioTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CreateApiariosTable extends Migration
      */
     public function up()
     {
-        Schema::create('apiarios', function (Blueprint $table) {
+        Schema::create('visita_apiario', function (Blueprint $table) {
             $table->id();
-            $table->string('nome')->unique();
-            $table->string('localizacao');
-            $table->integer('ninhos')->unsigned();
-            $table->integer('melgueiras')->unsigned();
-            $table->integer('enxames')->unsigned();
+            $table->string('nomes');
+            $table->date('dataVisita');
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ class CreateApiariosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('apiarios');
+        Schema::dropIfExists('visita_apiario');
     }
 }

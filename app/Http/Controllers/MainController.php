@@ -39,7 +39,11 @@ public function deslogarUsuario(){
 //Apiário
 public function apiarios(){
     $apiarios = $this->apiarioController->getApiarios();
-    return view('apiarios',compact('apiarios'));
+    $visitas = [];
+    foreach ($apiarios as $apiario){
+        $visitas[$apiario->getId()] = $this->apiarioController->getVisitasPorApiario($apiario->getId());
+    }
+    return view('apiarios',compact('apiarios','visitas'));
 }
 public function apiario($id){
     $apiario = $this->apiarioController->find($id);
@@ -101,6 +105,42 @@ public function deletarGalao(Request $request){
        }else{
            return redirect()->back()->with(['erro'=>'Falha ao deletar galão']);
        }
+}
+//Visita Apiário
+public function visitas(){
+       $visitas = $this->apiarioController->getVisitas();
+       $apiarios = $this->apiarioController->getApiarios();
+       return view('visitas',compact('visitas','apiarios'));
+}
+public function visita($id){
+       $visita = $this->apiarioController->getVisita($id);
+       $apiarios = $this->apiarioController->getApiarios();
+       return view('visita',compact('visita','apiarios'));
+}
+public function editarVisita(Request $request){
+    if($this->apiarioController->editarVisita($request)){
+        return redirect()->back();
+    }else{
+        return redirect()->back()->with(['erro'=>'Falha ao editar visita']);
+    }
+}
+public function formCadastrarVisita(){
+       $apiarios = $this->apiarioController->getApiarios();
+       return view('cadastrarVisita',compact('apiarios'));
+}
+public function cadastrarVisita(Request $request){
+    if($this->apiarioController->cadastrarVisita($request)){
+        return redirect()->back();
+    }else{
+        return redirect()->back()->with(['erro'=>'Falha ao cadsatrar visita']);
+    }
+}
+public function deletarVisita(Request $request){
+    if($this->apiarioController->deletarVisita($request->id)){
+        return redirect()->route('visitas');
+    }else{
+        return redirect()->back()->with(['erro'=>'Falha ao deletar visita']);
+    }
 }
 
 }

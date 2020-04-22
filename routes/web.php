@@ -42,4 +42,12 @@ Route::group(['middleware'=>'auth'],function (){
     Route::get('/galao/{id}','MainController@galao')->name('galao');
     Route::post('/galao','MainController@editarGalao')->name('editarGalaoPost');
     Route::get('/deletarGalao','MainController@deletarGalao')->name('deletarGalao');
+    //Visita Apiários
+    Route::get('/cadastrarVisita','MainController@formCadastrarVisita')->name('cadastrarVisita');
+    Route::post('/cadastrarVisita','MainController@cadastrarVisita')->name('cadastrarVisitaPost');
+    Route::get('/visitas','MainController@visitas')->name('visitas');
+    Route::get('/visita/{id}','MainController@visita')->name('visita');
+    Route::post('/visita','MainController@editarVisita')->name('editarVisitaPost');
+    Route::get('/deletarVisita','MainController@deletarVisita')->name('deletarVisita');
+
 });

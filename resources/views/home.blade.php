@@ -27,6 +27,16 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-sm-6 my-2">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Visitas</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">C R U D</h6>
+                                    <p class="card-text">Cadastrar, editar e excluir visita</p>
+                                    <a href="{{route('visitas')}}" class="btn btn-sm btn-primary">Visualizar</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     </div>
                 </div>

@@ -23,17 +23,11 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-8">
+                                <div class="col-md-4">
                                     <label>Nome</label>
                                     <input type="text" class="form-control" name="nome" id="nome" required>
                                 </div>
-                                <div class="col-md-4">
-                                    <label>Data da ultima visita</label>
-                                    <input type="date" class="form-control" name="dataVisita" id="dataVisita" required>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
+                                <div class="col-md-8">
                                     <label>Localização</label>
                                     <input type="text" class="form-control" name="localizacao" id="localizacao" required>
                                 </div>
@@ -52,18 +46,6 @@
                                 <div class="col-md-4">
                                     <label>Enxames</label>
                                     <input type="number" class="form-control" name="enxames" id="enxames" required>
-                                </div>
-                            </div>
-                            <hr>
-                            <h6 class="font-weight-bold">Caixas adicionadas na ultima visita</h6>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <label>Melgueiras</label>
-                                    <input type="number" class="form-control" name="melgueirasNovas" id="melgueirasNovas">
-                                </div>
-                                <div class="col-md-6">
-                                    <label>Ninhos</label>
-                                    <input type="number" class="form-control" name="ninhosNovos" id="ninhosNovos">
                                 </div>
                             </div>
                             <div class="row my-2 text-right">

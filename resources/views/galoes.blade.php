@@ -18,7 +18,7 @@
                                     @foreach($galoes as $galao)
                                         <hr>
                                         <div class="row">
-                                            <div class="col-12">
+                                            <div class="col-12 font-weight-bolder">
                                                 <?php $pesoTotal += $galao->getPeso();?>
                                                 <div class="float-left">{{$galao->getTipo()}} - {{$galao->getPeso()}}
                                                     kg
@@ -31,7 +31,11 @@
 
                                     @endforeach
                                 @else
-                                    Não há galões cadastrados
+                                    <div class="text-center">
+                                        <img src="{{asset('img/galoes.png')}}" width="100">
+                                        <br>
+                                        <h5>Não há galões cadastrados</h5>
+                                    </div>
                                 @endif
                             </div>
                         </div>
